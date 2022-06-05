@@ -35,6 +35,6 @@ h + xlim("2014","2016","2018","2020") + scale_color_gradient(low = "white", high
 
 
 t <- ggplot(data = fiesta, aes(x = year, y = price)) + geom_jitter(aes(color = mileage))
-t + xlim("2014","2015","2016","2017","2018","2019") + ylim(2500,22500) + scale_color_gradient2(low = "lightblue", mid = "purple", high = 'navy', midpoint = 60000) + geom_hline(aes(yintercept = 8000)) + geom_hline(aes(yintercept = 10000)) + theme_light() + labs(title = "Second hand Ford Fiesta prices:") + xlab("Ford Fiesta Model") + ylab("Price ($)")
+t + xlim("2014","2015","2016","2017","2018","2019") + ylim(2500,22500) + scale_color_gradient2(low = "lightblue", mid = "purple", high = 'navy', midpoint = 60000) + theme_light() + labs(title = "Second hand Ford Fiesta prices:") + xlab("Ford Fiesta Model") + ylab("Price ($)")
 t + scale_color_gradient2(low = "lightblue", mid = "royalblue", high = 'navy', midpoint = 60000) + theme_light() + labs(title = "Second hand Ford Fiesta prices:") + xlab("Ford Fiesta Model") + ylab("Price ($)") + guides(x = guide_axis(angle = 45))
 #RColorBrewer::display.brewer.all()
