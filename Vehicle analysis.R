@@ -9,6 +9,8 @@ cars <- cars[order(cars$consumption, decreasing = FALSE),]
 
 df <- cars[cars$consumption <= 5,c("make",'model','consumption','tankSize')]
 
+unique(df$make)
+
 barplot(height = df$consumption[1:10], names.arg = df$model[1:10], horiz = TRUE, las = 1)
 
 g <- ggplot(data = cars, aes(x = consumption, y = cylinder)) + geom_point(aes(col = engineSize))
